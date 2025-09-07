@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy for ItineraGeo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Neutrals -->
+    <!-- Application Structure Plan: The SPA is designed as an interactive document. It features a sticky side-navigation bar (top bar on mobile) for quick access to different policy sections, transforming the linear document into a non-linear, explorable interface. The core content is displayed in a main panel, with the most dense section, "Information We Collect," utilizing an interactive accordion. This allows users to expand only the topics they are interested in, reducing cognitive load. This structure was chosen to make a typically dense legal document more user-friendly, transparent, and respectful of the user's time by enabling them to find specific information quickly. -->
+    <!-- Visualization & Content Choices: The source report is entirely textual. Therefore, no data charts (Chart.js/Plotly) are necessary. The primary goal is to organize and present information effectively.
+- Report Info: "Information We Collect" section with multiple data types. -> Goal: Organize & Simplify. -> Presentation: Interactive Accordion. -> Interaction: Click to expand/collapse. -> Justification: Breaks down the most complex section into manageable parts, preventing user overwhelm. -> Library/Method: Vanilla JS.
+- Report Info: Main Policy Sections. -> Goal: Navigate. -> Presentation: Sticky side/top navigation menu. -> Interaction: Smooth scroll to section on click. -> Justification: Provides a persistent table of contents for easy navigation without losing context. -> Library/Method: Vanilla JS.
+- Report Info: Section content. -> Goal: Inform & Readability. -> Presentation: Styled text blocks in cards with icons. -> Interaction: Static text. -> Justification: Improves visual hierarchy and makes content easier to scan and read. -> Library/Method: Tailwind CSS. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .active-nav {
+            color: #2563eb;
+            background-color: #eff6ff;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto max-w-6xl p-4 md:p-8">
+        <header class="mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Privacy Policy for ItineraGeo</h1>
+            <p class="text-sm text-gray-500 mt-2">Last Updated: September 7, 2025</p>
+            <p class="mt-4 text-gray-600">
+                Welcome to the ItineraGeo privacy policy. This interactive document explains how your data is handled. We are committed to transparency and protecting your privacy. Use the navigation on the left (or the menu above on mobile) to jump to a specific section, or scroll down to read the full policy.
+            </p>
+        </header>
+
+        <div class="flex flex-col md:flex-row md:space-x-8">
+            <!-- Sticky Navigation -->
+            <nav id="toc-nav" class="md:w-1/4 mb-8 md:mb-0 md:sticky md:top-8 self-start">
+                 <h2 class="text-lg font-semibold mb-3 text-gray-700 hidden md:block">Table of Contents</h2>
+                <ul class="space-y-2">
+                    <li><a href="#info-collection" class="nav-link block font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md">1. Information We Collect</a></li>
+                    <li><a href="#data-use" class="nav-link block font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md">2. How We Use Your Data</a></li>
+                    <li><a href="#data-sharing" class="nav-link block font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md">3. Data Sharing</a></li>
+                    <li><a href="#data-security" class="nav-link block font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md">4. Data Security</a></li>
+                    <li><a href="#data-retention" class="nav-link block font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md">5. Data Retention</a></li>
+                    <li><a href="#childrens-privacy" class="nav-link block font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md">6. Children’s Privacy</a></li>
+                    <li><a href="#rights-choices" class="nav-link block font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md">7. Your Rights and Choices</a></li>
+                    <li><a href="#policy-changes" class="nav-link block font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md">8. Changes to This Policy</a></li>
+                    <li><a href="#contact-us" class="nav-link block font-medium text-gray-600 hover:text-blue-600 p-2 rounded-md">9. Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="md:w-3/4">
+                <div class="space-y-12">
+                    <section id="info-collection" class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Information We Collect</h2>
+                        <p class="mb-6 text-gray-600">
+                            ItineraGeo is designed to be a powerful offline-first tool. This means the core functionality of the app processes data directly on your device, giving you full control. This section breaks down the specific types of data the app accesses to function properly. Click on each item to see the details.
+                        </p>
+                        
+                        <div id="accordion" class="space-y-3">
+                            <!-- Accordion Item 1: Location -->
+                            <div class="accordion-item border rounded-lg overflow-hidden">
+                                <button class="accordion-header w-full flex justify-between items-center p-4 text-left font-semibold text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                                    <div class="flex items-center">
+                                        <span class="mr-3 text-blue-600">📍</span>
+                                        <span>Location Data (GPS)</span>
+                                    </div>
+                                    <span class="accordion-icon transition-transform transform">▼</span>
+                                </button>
+                                <div class="accordion-content hidden p-4 border-t bg-white">
+                                    <p class="font-semibold text-gray-700">What we collect:</p>
+                                    <p class="mb-2 text-gray-600">We access your device’s precise location (latitude, longitude, altitude) via GPS to provide core mapping and sensor functionalities. This includes displaying your current position on a map, providing location coordinates, and using location for georeferencing.</p>
+                                    <p class="font-semibold text-gray-700">How we use it:</p>
+                                    <p class="text-gray-600">Location data is used in real-time within the app to power features like the map viewer and sensor hub. This data is stored locally on your device as part of your project files in a private SQLite database. We do not transmit this information off your device.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 2: Sensors -->
+                            <div class="accordion-item border rounded-lg overflow-hidden">
+                                <button class="accordion-header w-full flex justify-between items-center p-4 text-left font-semibold text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                                    <div class="flex items-center">
+                                        <span class="mr-3 text-blue-600">🧭</span>
+                                        <span>Device Sensors</span>
+                                    </div>
+                                    <span class="accordion-icon transition-transform transform">▼</span>
+                                </button>
+                                <div class="accordion-content hidden p-4 border-t bg-white">
+                                    <p class="font-semibold text-gray-700">What we collect:</p>
+                                    <p class="mb-2 text-gray-600">The app uses your device's accelerometer, magnetometer, and gyroscope to power the Geological Compass and other orientation-based features.</p>
+                                    <p class="font-semibold text-gray-700">How we use it:</p>
+                                    <p class="text-gray-600">This data is processed in real-time on your device to calculate geological measurements like strike, dip, and dip direction. This sensor data is not stored or transmitted.</p>
+                                </div>
+                            </div>
+
+                            <!-- Accordion Item 3: Files -->
+                            <div class="accordion-item border rounded-lg overflow-hidden">
+                                <button class="accordion-header w-full flex justify-between items-center p-4 text-left font-semibold text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                                    <div class="flex items-center">
+                                        <span class="mr-3 text-blue-600">📄</span>
+                                        <span>Files and Media (Storage Access)</span>
+                                    </div>
+                                    <span class="accordion-icon transition-transform transform">▼</span>
+                                </button>
+                                <div class="accordion-content hidden p-4 border-t bg-white">
+                                    <p class="font-semibold text-gray-700">What we collect:</p>
+                                    <p class="mb-2 text-gray-600">The app requires access to your device's storage to allow you to import images and map files (like GeoTIFFs) for use in your projects. It also needs storage access to save your projects, corrected images, and exported maps.</p>
+                                    <p class="font-semibold text-gray-700">How we use it:</p>
+                                    <p class="text-gray-600">All files you import and create are stored in the application's private directory or, when exporting, in a public directory like "Downloads" at your explicit direction. Files are not automatically accessed or transmitted by the app.</p>
+                                </div>
+                            </div>
+
+                             <!-- Accordion Item 4: Purchases -->
+                            <div class="accordion-item border rounded-lg overflow-hidden">
+                                <button class="accordion-header w-full flex justify-between items-center p-4 text-left font-semibold text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none">
+                                    <div class="flex items-center">
+                                         <span class="mr-3 text-blue-600">💳</span>
+                                        <span>In-App Purchases</span>
+                                    </div>
+                                    <span class="accordion-icon transition-transform transform">▼</span>
+                                </button>
+                                <div class="accordion-content hidden p-4 border-t bg-white">
+                                    <p class="font-semibold text-gray-700">What we collect:</p>
+                                    <p class="mb-2 text-gray-600">To manage premium features, the app uses the Google Play Billing Library. We do not collect, process, or store any of your financial information.</p>
+                                    <p class="font-semibold text-gray-700">How we use it:</p>
+                                    <p class="text-gray-600">All purchase transactions are handled securely by Google Play. Our app only receives a confirmation token from Google to verify a purchase and unlock the corresponding features.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="data-use" class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">2. How We Use Your Data</h2>
+                        <div class="space-y-4 text-gray-600">
+                            <p>
+                                Your data is used exclusively to provide and improve the functionality of ItineraGeo. We believe your data is yours, and our use of it is limited to making the app work for you directly on your device.
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 pl-2">
+                                <li>Enable you to create, save, and manage geological mapping projects on your device.</li>
+                                <li>Display maps and your location accurately.</li>
+                                <li>Provide precise measurements from device sensors.</li>
+                                <li>Process images that you select for correction and georeferencing.</li>
+                                <li>Unlock premium features upon successful purchase validation.</li>
+                            </ul>
+                            <p class="font-semibold text-gray-800 bg-yellow-100 p-3 rounded-md">
+                                All your project data is stored locally on your device. We do not have access to it, and it is not uploaded to any cloud server automatically.
+                            </p>
+                        </div>
+                    </section>
+
+                    <section id="data-sharing" class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Data Sharing</h2>
+                        <p class="text-gray-600">
+                            We do not sell, trade, or otherwise transfer your personal information or project data to outside parties. Your data is your own. The only exceptions are:
+                        </p>
+                        <ul class="mt-4 list-disc list-inside space-y-2 text-gray-600 pl-2">
+                            <li><strong class="text-gray-700">With Your Explicit Consent:</strong> If you choose to export and share a project file, you are in control of where that data goes.</li>
+                            <li><strong class="text-gray-700">For Legal Reasons:</strong> We may disclose information if required to do so by law or in the good faith belief that such action is necessary to comply with a legal obligation.</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="data-security" class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Data Security</h2>
+                        <p class="text-gray-600">We are committed to protecting your data. All project data is stored in a local SQLite database within the application's sandboxed storage on your device, which is protected by the Android operating system's security measures.</p>
+                    </section>
+
+                    <section id="data-retention" class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Data Retention</h2>
+                        <p class="text-gray-600">We do not collect or retain any personal data on our servers. All data you create within the app is stored on your device and remains there until you choose to delete the app or its data.</p>
+                    </section>
+
+                    <section id="childrens-privacy" class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Children’s Privacy</h2>
+                        <p class="text-gray-600">ItineraGeo is intended for a professional and academic audience and is not directed at children under the age of 13. We do not knowingly collect any personal information from children.</p>
+                    </section>
+
+                    <section id="rights-choices" class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Your Rights and Choices</h2>
+                        <p class="text-gray-600">As all your data is stored locally, you have full control over it. You can manage your project files from within the app, including deleting them at any time. You can also manage app permissions (like Location and Storage) at any time through your device’s system settings.</p>
+                    </section>
+
+                    <section id="policy-changes" class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Changes to This Privacy Policy</h2>
+                        <p class="text-gray-600">We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy within the app and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.</p>
+                    </section>
+
+                    <section id="contact-us" class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Contact Us</h2>
+                        <p class="text-gray-600">If you have any questions about this Privacy Policy, please contact us through the support channels provided within the ItineraGeo application.</p>
+                        <p class="mt-2 text-gray-600"><strong>Developer:</strong> LinWei</p>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('.accordion-icon');
+                    
+                    if (content.classList.contains('hidden')) {
+                        content.classList.remove('hidden');
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        content.classList.add('hidden');
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+            
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.3
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active-nav');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active-nav');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
